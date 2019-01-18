@@ -23,7 +23,11 @@ class TasksController extends Controller
      */
     public function create()
     {
-        //
+        $task = new Task;
+        $task->title = Input::get('title');
+        $task->description = Input::get('description');
+        $task->save();
+        return redirect('tasks');
     }
 
     /**
@@ -34,7 +38,11 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $task = new Task;
+        $task->title = Input::get('title');
+        $task->description = Input::get('description');
+        $task->save();
+        return redirect('tasks');
     }
 
     /**
